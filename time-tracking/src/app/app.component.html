@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngIf="!(user|async)?.uid">
+  <a class="btn btn-default" (click)="login()">Login Anonymously</a>
+  <a class="btn btn-primary" (click)="loginGoogle()">Google Login</a>
+</div>
+<div *ngIf="(user|async)?.uid">
+  <a class="btn btn-default" (click)="logout()">Logout</a>
+  <app-create-event></app-create-event>
+  <app-view-events></app-view-events>
+</div>

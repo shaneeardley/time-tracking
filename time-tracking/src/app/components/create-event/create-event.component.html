@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="container">
+    <h2>Add Event</h2>
+    <div class="form-group">
+      <input type="text" placeholder="Enter event name" class="form-control" #event>
+    </div>
+    <div class="form-group">
+      <input type="number" placeholder="Time spent" class="form-control" #time>
+    </div>
+    <div class="form-group">
+      <input type="file" class="form-control" (change)="upload(f,img)" #f>
+    </div>
+    <div class="form-group">
+      <img height="100" width="100" alt="Preview Will be displayed here" src="" #img>
+    </div>
+    <button (click)="add(event,img,time)" class="btn btn-primary">Add Event</button>
+  </div>
+</div>
